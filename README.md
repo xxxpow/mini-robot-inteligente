@@ -2,144 +2,94 @@
 
 Bienvenido al proyecto **Mini Robot Inteligente**.
 
-En este proyecto construiremos paso a paso un pequeño robot utilizando Arduino, sensores, motores, pantalla OLED y otros componentes electrónicos.
+En este proyecto construiremos paso a paso un pequeño robot utilizando Arduino, electrónica, sensores, motores, pantalla OLED y programación.
 
-El proyecto está dividido en capítulos para que puedas seguir el desarrollo desde cero y construir tu propio robot.
-
----
-
-## 🎬 Serie en YouTube
-
-Este repositorio acompaña la serie de videos **Mini Robot Inteligente**.
-
-### 📺 Capítulo 01 — Pantalla OLED y RoboEyes
-
-En este primer capítulo comenzamos a darle vida al robot utilizando un **Arduino UNO** y una pantalla OLED de **0.96" 128×64 con comunicación I2C**.
-
-▶️ **Ver el video en YouTube:**
-
-https://youtu.be/RubKAwhqtq0
+El proyecto acompaña la serie de videos **Mini Robot Inteligente** del canal **INVENTOS Y PROYECTOS**, donde podrás seguir el proceso de construcción desde cero.
 
 ---
 
-# 📂 Estructura del proyecto
+## 🎬 Capítulo 01 — Pantalla OLED y RoboEyes
 
-```text
-mini-robot-inteligente/
-│
-├── README.md
-│
-├── codigo/
-│   └── Capitulo-01/
-│       └── robot_capitulo_01.ino
-│
-├── componentes/
-│   └── Capitulo-01/
-│
-└── imagenes/
-    └── Capitulo-01/
-```
-
-### 📁 `codigo`
-
-Aquí encontrarás los programas utilizados para controlar el robot.
-
-Cada capítulo tendrá su propia carpeta con el código correspondiente.
-
-### 📁 `componentes`
-
-Aquí iremos colocando información sobre los componentes utilizados en cada capítulo.
-
-### 📁 `imagenes`
-
-Aquí se almacenarán imágenes, diagramas y otros recursos del proyecto.
-
----
-
-# 🚀 Capítulo 01 — Pantalla OLED y RoboEyes
-
-En este capítulo utilizamos un **Arduino UNO** y una pantalla OLED de **0.96" 128×64 con comunicación I2C**.
-
-El programa utiliza la biblioteca **FluxGarage RoboEyes** para mostrar diferentes animaciones de ojos en la pantalla OLED.
-
-## 🧰 Componentes
+En el primer capítulo comenzamos a darle vida al robot utilizando:
 
 * Arduino UNO
 * Pantalla OLED 0.96" 128×64 I2C
-* Cable USB
-* Cables Dupont
+* Biblioteca FluxGarage RoboEyes
+
+El programa muestra diferentes animaciones y expresiones en los ojos del robot.
+
+### 📺 Ver el video
+
+👉 https://youtu.be/RubKAwhqtq0
+
+---
+
+# 🧰 Componentes
+
+Para este capítulo necesitas:
+
+* **Arduino UNO**
+* **Pantalla OLED 0.96" 128×64 I2C**
+* **Cable USB**
+* **Cables Dupont**
 
 ---
 
 # 💻 Software necesario
 
-Antes de cargar el programa necesitas instalar **Arduino IDE** y las bibliotecas utilizadas por el proyecto.
-
 ## 1. Arduino IDE
 
-Descarga Arduino IDE desde la página oficial de Arduino:
+Necesitas instalar **Arduino IDE** para abrir, compilar y cargar el programa en el Arduino UNO.
 
-https://www.arduino.cc/en/software
+### 🔗 Descargar Arduino IDE
 
-Arduino IDE 2 es el entorno recomendado para trabajar con este proyecto. La página oficial de Arduino proporciona las versiones actuales para Windows, macOS y Linux.
+👉 https://www.arduino.cc/en/software
 
-### 📚 Documentación oficial
-
-https://docs.arduino.cc/software/ide/
+Actualmente la página oficial de Arduino ofrece **Arduino IDE 2.3.10**.
 
 ---
 
 ## 2. Adafruit GFX Library
 
-Esta biblioteca proporciona las funciones gráficas utilizadas por la pantalla OLED.
+Esta biblioteca proporciona las funciones gráficas utilizadas por el programa.
 
 ### Instalación
 
 Abre Arduino IDE y selecciona:
 
-**Herramientas → Gestionar bibliotecas...**
+**Sketch → Include Library → Manage Libraries...**
 
 Busca:
 
-```text
-Adafruit GFX Library
-```
+`Adafruit GFX Library`
 
-y pulsa **Instalar**.
+y pulsa **Install**.
 
-### Repositorio oficial
+### 🔗 Repositorio oficial
 
-https://github.com/adafruit/Adafruit-GFX-Library
-
-Adafruit indica que esta biblioteca se instala fácilmente desde el Library Manager de Arduino IDE.
+👉 https://github.com/adafruit/Adafruit-GFX-Library
 
 ---
 
 ## 3. Adafruit SSD1306
 
-Esta biblioteca permite controlar la pantalla OLED basada en el controlador **SSD1306**.
+Esta biblioteca permite controlar la pantalla OLED basada en el controlador SSD1306.
 
 ### Instalación
 
 En Arduino IDE selecciona:
 
-**Herramientas → Gestionar bibliotecas...**
+**Sketch → Include Library → Manage Libraries...**
 
 Busca:
 
-```text
-Adafruit SSD1306
-```
+`Adafruit SSD1306`
 
-y pulsa **Instalar**.
+y pulsa **Install**.
 
-### Repositorio oficial
+### 🔗 Repositorio oficial
 
-https://github.com/adafruit/Adafruit_SSD1306
-
-La biblioteca Adafruit SSD1306 utiliza Adafruit GFX y está diseñada para pantallas OLED con controladores SSD1306, incluyendo comunicación I2C.
-
-> **Nota:** Arduino IDE puede instalar automáticamente las bibliotecas necesarias como dependencias. Si el IDE solicita instalar **Adafruit BusIO**, acepta la instalación.
+👉 https://github.com/adafruit/Adafruit_SSD1306
 
 ---
 
@@ -151,29 +101,29 @@ Esta es la biblioteca utilizada para crear los ojos animados del robot.
 
 En Arduino IDE selecciona:
 
-**Herramientas → Gestionar bibliotecas...**
+**Sketch → Include Library → Manage Libraries...**
 
 Busca:
 
-```text
-FluxGarage RoboEyes
-```
+`FluxGarage RoboEyes`
 
-y pulsa **Instalar**.
+y pulsa **Install**.
 
-### Repositorio oficial
+Después de instalarla podrás encontrar sus ejemplos en:
 
-https://github.com/FluxGarage/RoboEyes
+**File → Examples → FluxGarage RoboEyes**
 
-La documentación de RoboEyes indica que puede instalarse directamente desde el Library Manager y que sus ejemplos aparecen posteriormente en:
+### 🔗 Repositorio oficial
 
-**Archivo → Ejemplos → FluxGarage RoboEyes**.
+👉 https://github.com/FluxGarage/RoboEyes
+
+La instalación y ubicación de los ejemplos están indicadas en la documentación oficial de RoboEyes.
 
 ---
 
-# 📥 Código del Capítulo 01
+# 📥 Código
 
-El código utilizado en este capítulo se encuentra en:
+El código del Capítulo 01 se encuentra en:
 
 ```text
 codigo/
@@ -181,160 +131,213 @@ codigo/
     └── robot_capitulo_01.ino
 ```
 
-Puedes abrir el archivo directamente desde este repositorio o descargar el proyecto completo.
+👉 **Código del Capítulo 01:**
+https://github.com/xxxpow/mini-robot-inteligente/tree/main/codigo/Capitulo-01
 
----
-
-# ⚙️ Cómo instalar y cargar el programa
-
-### Paso 1 — Instala Arduino IDE
-
-Descarga e instala Arduino IDE desde:
-
-https://www.arduino.cc/en/software
-
----
-
-### Paso 2 — Instala las bibliotecas
-
-Desde Arduino IDE abre:
-
-**Herramientas → Gestionar bibliotecas...**
-
-Instala:
-
-* **Adafruit GFX Library**
-* **Adafruit SSD1306**
-* **FluxGarage RoboEyes**
-
-Si Arduino IDE solicita instalar alguna dependencia adicional, acepta la instalación.
-
----
-
-### Paso 3 — Conecta el Arduino
-
-Conecta el **Arduino UNO** a tu computadora mediante el cable USB.
-
----
-
-### Paso 4 — Abre el código
-
-Abre:
-
-```text
-robot_capitulo_01.ino
-```
-
-con Arduino IDE.
-
----
-
-### Paso 5 — Selecciona la placa
-
-En Arduino IDE selecciona:
-
-**Herramientas → Placa → Arduino AVR Boards → Arduino UNO**
-
----
-
-### Paso 6 — Selecciona el puerto
-
-Selecciona el puerto COM correspondiente a tu Arduino UNO.
-
----
-
-### Paso 7 — Verifica el programa
-
-Pulsa el botón:
-
-**✓ Verificar**
-
-para comprobar que el código compile correctamente.
-
----
-
-### Paso 8 — Sube el programa
-
-Pulsa:
-
-**→ Subir**
-
-Arduino IDE cargará el programa en el Arduino UNO.
-
-Cuando termine, la pantalla OLED debería comenzar a mostrar las animaciones programadas.
+> ⚠️ El código publicado en este repositorio corresponde a la versión utilizada en el proyecto y puede actualizarse a medida que avance la serie.
 
 ---
 
 # 🔌 Conexión de la pantalla OLED
 
-La pantalla OLED utiliza comunicación **I2C**.
+La pantalla utiliza comunicación **I2C**.
 
 Para el Arduino UNO:
 
-| OLED | Arduino UNO |
-| ---- | ----------- |
-| GND  | GND         |
-| VCC  | 5V          |
-| SCL  | A5          |
-| SDA  | A4          |
+| Pantalla OLED | Arduino UNO |
+| ------------- | ----------- |
+| GND           | GND         |
+| VCC           | 5V          |
+| SDA           | A4          |
+| SCL           | A5          |
 
-> ⚠️ Verifica siempre las especificaciones de tu pantalla OLED antes de conectarla.
+### 📌 Resumen
+
+```text
+OLED       Arduino UNO
+
+GND   →    GND
+VCC   →    5V
+SDA   →    A4
+SCL   →    A5
+```
+
+> ⚠️ Verifica siempre las especificaciones de tu pantalla antes de conectarla.
+
+---
+
+# ⚙️ Cómo cargar el programa
+
+### 1️⃣ Instala Arduino IDE
+
+Descarga e instala Arduino IDE desde:
+
+https://www.arduino.cc/en/software
+
+### 2️⃣ Instala las bibliotecas
+
+Desde Arduino IDE:
+
+**Sketch → Include Library → Manage Libraries...**
+
+Instala:
+
+* Adafruit GFX Library
+* Adafruit SSD1306
+* FluxGarage RoboEyes
+
+Si Arduino IDE solicita instalar alguna dependencia adicional, acepta la instalación.
+
+### 3️⃣ Conecta el Arduino
+
+Conecta el Arduino UNO a la computadora mediante USB.
+
+### 4️⃣ Abre el código
+
+Abre:
+
+`robot_capitulo_01.ino`
+
+con Arduino IDE.
+
+### 5️⃣ Selecciona la placa
+
+Selecciona:
+
+**Tools → Board → Arduino AVR Boards → Arduino UNO**
+
+### 6️⃣ Selecciona el puerto
+
+Selecciona el puerto COM correspondiente al Arduino UNO.
+
+### 7️⃣ Verifica el código
+
+Pulsa:
+
+**✓ Verify**
+
+para comprobar que el programa compile correctamente.
+
+### 8️⃣ Sube el programa
+
+Pulsa:
+
+**→ Upload**
+
+Cuando termine la carga, el programa comenzará a ejecutarse en el Arduino.
+
+La pantalla OLED debería mostrar las animaciones programadas.
 
 ---
 
 # ❗ Solución de problemas
 
-### El programa no compila
+## El programa no compila
 
-Comprueba:
+Comprueba que estén instaladas:
 
-1. Que **Adafruit GFX Library** esté instalada.
-2. Que **Adafruit SSD1306** esté instalada.
-3. Que **FluxGarage RoboEyes** esté instalada.
-4. Que las dependencias solicitadas por Arduino IDE también estén instaladas.
-5. Que hayas seleccionado **Arduino UNO** como placa.
+* Adafruit GFX Library
+* Adafruit SSD1306
+* FluxGarage RoboEyes
 
-### Arduino IDE no encuentra el puerto
-
-Comprueba que:
-
-* El Arduino esté conectado mediante USB.
-* El cable USB permita transferencia de datos.
-* El Arduino aparezca en el administrador de dispositivos de Windows.
-
-### La pantalla no muestra nada
-
-Revisa las conexiones:
-
-* GND
-* VCC
-* SDA
-* SCL
-
-En el Arduino UNO:
-
-* **SDA → A4**
-* **SCL → A5**
+También verifica que hayas seleccionado **Arduino UNO** como placa.
 
 ---
 
-# 🔜 Próximos capítulos
+## La pantalla no muestra nada
 
-Este proyecto continuará creciendo capítulo a capítulo.
+Comprueba las conexiones:
 
-En los próximos capítulos iremos incorporando nuevas funciones y componentes al robot.
+* GND → GND
+* VCC → 5V
+* SDA → A4
+* SCL → A5
 
-Algunas de las características que iremos desarrollando son:
+También verifica que la pantalla sea una OLED compatible con el controlador SSD1306.
 
-* 👀 Animaciones de los ojos
+---
+
+## Arduino IDE no encuentra el puerto
+
+Comprueba:
+
+* Que el Arduino esté conectado.
+* Que el cable USB permita transferencia de datos.
+* Que el Arduino aparezca correctamente en el sistema operativo.
+
+---
+
+# 📂 Estructura del repositorio
+
+El proyecto está organizado de la siguiente manera:
+
+```text
+mini-robot-inteligente/
+│
+├── codigo/
+│
+├── documentacion/
+│
+├── esquemas/
+│
+├── imagenes/
+│
+└── README.md
+```
+
+### 📁 `codigo`
+
+Contiene los programas utilizados para controlar el robot.
+
+### 📁 `documentacion`
+
+Contiene información y documentación relacionada con el proyecto.
+
+### 📁 `esquemas`
+
+Aquí se irán agregando los esquemas de conexión del robot.
+
+### 📁 `imagenes`
+
+Contiene fotografías, ilustraciones y otros recursos visuales del proyecto.
+
+### 📄 `README.md`
+
+Es esta página. Aquí encontrarás la información principal para comenzar con el proyecto.
+
+---
+
+# 🚀 Próximos capítulos
+
+El robot irá incorporando progresivamente nuevas funciones y componentes.
+
+Entre ellos:
+
+* 👀 Pantalla OLED y ojos animados
+* 👂 Movimiento de las orejas
+* 🛞 Movimiento mediante motores
+* 📏 Sensores
 * 🎤 Micrófono
 * 🔊 Reproducción de sonidos
-* 📡 Sensores
-* 🚗 Motores
-* 👂 Movimiento de las orejas
-* 🧠 Nuevas funciones inteligentes
+* 🧠 Nuevas funciones
 * 🔋 Sistema de alimentación
 * 🤖 Integración de todos los componentes
+
+El proyecto se encuentra actualmente **en desarrollo**, por lo que las características y componentes pueden cambiar durante la construcción.
+
+---
+
+# 📺 Sigue el proyecto
+
+Puedes seguir todo el proceso de construcción en el canal:
+
+**INVENTOS Y PROYECTOS**
+
+### 🎬 Capítulo 01
+
+👉 https://youtu.be/RubKAwhqtq0
+
+El repositorio se irá actualizando a medida que avance la serie.
 
 ---
 
@@ -346,6 +349,9 @@ Si este proyecto te resulta útil:
 
 📺 Suscríbete al canal de YouTube.
 
-👍 Comparte el proyecto con otras personas interesadas en Arduino y robótica.
+👍 Comparte el proyecto con otras personas interesadas en Arduino, electrónica y robótica.
 
-¡Gracias por acompañarme en la construcción del **Mini Robot Inteligente**! 🤖
+---
+
+**INVENTOS Y PROYECTOS**
+🤖 Arduino • Electrónica • Robótica • DIY
