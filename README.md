@@ -349,4 +349,3 @@ Si este proyecto te resulta útil:
 👍 Comparte el proyecto con otras personas interesadas en Arduino y robótica.
 
 ¡Gracias por acompañarme en la construcción del **Mini Robot Inteligente**! 🤖
-
